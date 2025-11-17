@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPC Africa | Readymix Concrete</title>
+
+  <!-- Bootstrap + Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ppc-red: #e41e26;
+      --ppc-dark: #111;
+      --ppc-light: #f9f9f9;
+      --ppc-text: #222;
+      --ppc-grey: #555;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: var(--ppc-text);
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .product-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)),
+        url('https://www.ppc.africa/media/x4ziso3f/readymix-bg-291749759-600.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .product-hero h1 {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2.8rem;
+    }
+    .product-hero p {
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin: 20px auto;
+    }
+
+    /* Product Filter */
+    .product-filter {
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      padding: 25px 20px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+    }
+    .product-filter .btn {
+      background-color: var(--ppc-red);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      padding: 8px 25px;
+    }
+    .product-filter-links a {
+      color: var(--ppc-red);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 10px;
+    }
+    .product-filter-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Product Info Section */
+    .product-info {
+      padding: 100px 0;
+      background: #fff;
+    }
+    .mix-card {
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      background: #fff;
+      padding: 25px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    .mix-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    .mix-card h5 {
+      font-weight: 700;
+      color: var(--ppc-red);
+      margin-bottom: 10px;
+    }
+    .mix-card ul {
+      padding-left: 20px;
+      color: var(--ppc-grey);
+      font-size: 0.95rem;
+    }
+
+    /* CTA Section */
+    .cta {
+      background: var(--ppc-red);
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .cta .btn {
+      background: #fff;
+      color: var(--ppc-red);
+      border-radius: 25px;
+      font-weight: 700;
+      padding: 10px 30px;
+      transition: 0.3s;
+    }
+    .cta .btn:hover {
+      background: #f4f4f4;
+      color: #b4161c;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 60px 0 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--ppc-red);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <section class="product-hero">
+    <h1>Readymix Concrete</h1>
+    <p>Premium concrete solutions designed for every construction need — engineered for strength, precision, and consistency.</p>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="product-filter">
+    <div class="dropdown d-inline-block">
+      <button class="btn dropdown-toggle" data-bs-toggle="dropdown">Readymix Concrete</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="cement.html">Cement</a></li>
+        <li><a class="dropdown-item" href="aggregates.html">Aggregates</a></li>
+        <li><a class="dropdown-item" href="premixes.html">Premixes</a></li>
+        <li><a class="dropdown-item" href="flyash.html">Fly Ash</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Product Info Section -->
+  <section class="product-info">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-danger">Our Readymix Solutions</h2>
+        <p class="text-muted">From general-purpose to specialized high-performance concrete, PPC provides customized mixes for every project type.</p>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="mix-card">
+            <h5>Regular Concrete</h5>
+            <p>Standard mixes ranging from 10MPa to 45MPa — ideal for everyday construction needs.</p>
+            <ul>
+              <li>Foundations</li>
+              <li>Floors</li>
+              <li>Walls & Columns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mix-card">
+            <h5>Pumpable Concrete</h5>
+            <p>High-workability concrete optimized for easy pumping and reduced segregation.</p>
+            <ul>
+              <li>Suspended slabs</li>
+              <li>Large floor areas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mix-card">
+            <h5>Fibre Reinforced Concrete</h5>
+            <p>Enhanced durability mix with polypropylene fibres for crack resistance and flexibility.</p>
+            <ul>
+              <li>Industrial floors</li>
+              <li>Precast applications</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mix-card">
+            <h5>Self-Compacting Concrete (SCC)</h5>
+            <p>Specialized mix with high fluidity, ensuring uniform filling of formwork without vibration.</p>
+            <ul>
+              <li>Columns and shafts</li>
+              <li>Architectural finishes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mix-card">
+            <h5>Colour Concrete</h5>
+            <p>Decorative pigment-treated concrete that brings aesthetics and durability together.</p>
+            <ul>
+              <li>Driveways</li>
+              <li>Patios & Walkways</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="mix-card">
+            <h5>Exposed Aggregate Concrete</h5>
+            <p>Visually striking finish with exposed aggregates for enhanced traction and beauty.</p>
+            <ul>
+              <li>Outdoor surfaces</li>
+              <li>Driveways & public spaces</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Need High-Performance Concrete?</h2>
+      <p class="mb-4">Get in touch with our team for project-specific mix designs or large-scale supply.</p>
+      <a href="/contact.html" class="btn">Contact PPC Readymix</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PPC Africa | Strength Beyond Existence</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

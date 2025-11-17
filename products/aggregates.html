@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPC Africa | Aggregates</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ppc-red: #e41e26;
+      --ppc-dark: #111;
+      --ppc-light: #f9f9f9;
+      --ppc-text: #222;
+      --ppc-grey: #555;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: var(--ppc-text);
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .product-hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('https://www.ppc.africa/media/13cfy3vg/sp-aggregate-bg-141054136-600.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .product-hero h1 {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2.8rem;
+    }
+
+    .product-hero p {
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin: 20px auto;
+    }
+
+    /* Filter Bar */
+    .product-filter {
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      padding: 25px 20px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .product-filter .btn {
+      background-color: var(--ppc-red);
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      padding: 8px 25px;
+    }
+
+    .product-filter-links a {
+      color: var(--ppc-red);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 10px;
+    }
+
+    .product-filter-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Products Grid */
+    .product-listing {
+      padding: 100px 0;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .product-card .image {
+      height: 230px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product-card h3 {
+      font-weight: 800;
+      color: var(--ppc-red);
+      margin-top: 15px;
+    }
+
+    .product-card h6 {
+      font-weight: 600;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: var(--ppc-grey);
+      padding: 0 15px;
+      min-height: 70px;
+    }
+
+    .product-card .btn {
+      margin-bottom: 20px;
+      background: var(--ppc-red);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 25px;
+      padding: 8px 25px;
+      transition: 0.3s;
+    }
+
+    .product-card .btn:hover {
+      background: #b4161c;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 60px 0 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--ppc-red);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="product-hero">
+    <h1>Superior Grade Aggregates</h1>
+    <p>PPC offers a wide range of high-quality aggregates used in construction, including sand and crushed stone, serving the building, chemical, and agricultural industries.</p>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="product-filter">
+    <div class="dropdown d-inline-block">
+      <button class="btn dropdown-toggle" data-bs-toggle="dropdown">Aggregates</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="cement.html">Cement</a></li>
+        <li><a class="dropdown-item" href="readymix.html">Readymix Concrete</a></li>
+        <li><a class="dropdown-item" href="premixes.html">Premixes</a></li>
+        <li><a class="dropdown-item" href="flyash.html">Fly Ash</a></li>
+      </ul>
+    </div>
+    <div class="product-filter-links mt-3">
+      <a href="#">Sand</a>
+      <a href="#">Road Layer Material</a>
+      <a href="#">Stone</a>
+      <a href="#">Specialised Aggregates</a>
+      <a href="#">Dump Rock</a>
+    </div>
+  </div>
+
+  <!-- Product Listing -->
+  <section class="product-listing">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+
+        <!-- Sand -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="product-card text-center">
+            <div class="image" style="background-image:url('https://www.ppc.africa/media/1qtnkg2g/riversand_rooftile.jpg')"></div>
+            <div class="p-3">
+              <h3>Sand</h3>
+              <h6>Superior Grade Sand</h6>
+              <p>High-quality sand for concrete, masonry, and plaster applications.</p>
+              <a href="#" class="btn">View Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Road Layer Material -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="product-card text-center">
+            <div class="image" style="background-image:url('https://www.ppc.africa/media/xgfj0syx/road-main-749773567.jpg')"></div>
+            <div class="p-3">
+              <h3>Road Layer Material</h3>
+              <h6>Basecourse & Sub-base</h6>
+              <p>Provides critical support for strong and long-lasting road design.</p>
+              <a href="#" class="btn">View Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stone -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="product-card text-center">
+            <div class="image" style="background-image:url('https://www.ppc.africa/media/sdqd0rqx/19mm.jpg')"></div>
+            <div class="p-3">
+              <h3>Stone</h3>
+              <h6>Concrete & Asphalt Stone</h6>
+              <p>Ideal for use in concrete products, asphalt paving, and ballast.</p>
+              <a href="#" class="btn">View Product</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialised Aggregates -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="product-card text-center">
+            <div class="image" style="background-image:url('https://www.ppc.africa/media/uy2leuqs/sp-aggregate-main-78362641.jpg')"></div>
+            <div class="p-3">
+              <h3>Specialised Aggregates</h3>
+              <h6>Industrial Use</h6>
+              <p>Metallurgical dolomite and agricultural lime for specialized applications.</p>
+              <a href="#" class="btn">View Product</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PPC Africa | Strength Beyond Existence</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

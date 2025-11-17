@@ -1,0 +1,337 @@
+/* ---------- Base Variables ---------- */
+:root {
+  --primary: #e41e26;
+  --dark: #000;
+  --light: #f8f8f8;
+}
+
+/* ---------- Reset & Global ---------- */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", "Roboto", sans-serif;
+  margin: 0;
+  padding-top: 90px;
+  color: #222;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.navbar-brand img {
+  height: 55px;
+}
+.nav-link {
+  font-weight: 500;
+  color: #000 !important;
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary) !important;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ---------- Hero Banner ---------- */
+.hero-banner {
+  background: linear-gradient(rgba(228, 30, 38, 0.9), rgba(228, 30, 38, 0.9)),
+              url('https://www.ppc.africa/wp-content/uploads/2023/07/hero-home.jpg')
+              center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-banner h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+.hero-banner .btn-light {
+  color: var(--primary);
+  border: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.hero-banner .btn-light:hover {
+  background-color: #fff;
+  color: var(--dark);
+}
+
+/* ---------- Strength Beyond Existence ---------- */
+.strength-section {
+  padding: 4rem 0 5rem;
+  background-color: #fff;
+}
+.strength-section img {
+  width: 100%;
+  border-bottom: 4px solid var(--primary);
+  border-radius: 4px 4px 0 0;
+}
+.strength-box {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 6px;
+  padding: 2.5rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+.strength-box h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.strength-box p {
+  color: #444;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.strength-box .btn-danger {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ---------- Buttons ---------- */
+.btn-danger {
+  background-color: var(--primary);
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn-danger:hover {
+  background-color: #c81020;
+}
+
+/* ---------- Products Section ---------- */
+#products {
+  background-color: var(--light);
+}
+#products h2 {
+  font-weight: 800;
+}
+.card {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  border-radius: 6px;
+}
+.card img {
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+  transition: transform 0.3s;
+}
+.card:hover img {
+  transform: scale(1.03);
+}
+.card-body h4 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.card-body h6 {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+.card-body p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ---------- Sustainability ---------- */
+.sustain-section {
+  padding: 5rem 0;
+}
+.sustain-section h2 {
+  color: var(--primary);
+  font-weight: 800;
+}
+.sustain-section p {
+  color: #333;
+}
+.sustain-section img {
+  border-radius: 6px;
+}
+
+/* ---------- Floating Sidebar ---------- */
+.floating-sidebar {
+  position: fixed;
+  right: 20px;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+.floating-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.floating-sidebar ul li {
+  margin-bottom: 10px;
+}
+.floating-sidebar ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+.floating-sidebar ul li a i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+.floating-sidebar ul li a span {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.floating-sidebar ul li a:hover {
+  padding-right: 20px;
+}
+.floating-sidebar ul li a:hover span {
+  opacity: 1;
+  max-width: 120px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--dark);
+  color: #ddd;
+  font-size: 0.9rem;
+}
+footer h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+footer ul li {
+  margin-bottom: 6px;
+}
+footer .small {
+  font-size: 0.85rem;
+}
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--primary);
+}
+footer .border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+/* Floating Sidebar */
+.floating-sidebar {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  z-index: 1000;
+}
+
+.floating-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.floating-sidebar ul li {
+  margin: 5px 0;
+}
+
+.floating-sidebar ul li a {
+  display: flex;
+  align-items: center;
+  background: #e41e26;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px 0 0 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.floating-sidebar ul li a:hover {
+  background: #b4161c;
+  padding-right: 25px;
+}
+
+.floating-sidebar ul li a i {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.floating-sidebar ul li a span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+/* ---------- Country Dropdown ---------- */
+.dropdown-country {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.dropdown-country .btn {
+  background-color: var(--primary); /* red */
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 260px; /* consistent width */
+  cursor: pointer;
+}
+
+.dropdown-country .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 260px;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.dropdown-country .dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-country .dropdown-content a:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.dropdown-country:hover .dropdown-content {
+  display: block;
+}

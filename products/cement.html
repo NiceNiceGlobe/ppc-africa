@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPC Africa | Cement Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ppc-red: #e41e26;
+      --ppc-dark: #111;
+      --ppc-light: #f9f9f9;
+      --ppc-text: #222;
+      --ppc-grey: #555;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--ppc-text);
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .product-hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.25)),
+        url('https://www.ppc.africa/media/iafpxmdr/cement-bg-1676201467-600.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 15px 120px;
+      position: relative;
+    }
+
+    .product-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .product-hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 15px auto 0;
+      color: #f3f3f3;
+    }
+
+    /* Filter Bar */
+    .product-filter {
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      padding: 25px 20px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .product-filter .dropdown .btn {
+      background: var(--ppc-red);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 25px;
+      padding: 8px 22px;
+      border: none;
+    }
+
+    .product-filter .dropdown-menu a {
+      color: var(--ppc-text);
+      font-weight: 500;
+    }
+
+    .product-filter .dropdown-menu a:hover {
+      background: var(--ppc-red);
+      color: #fff;
+    }
+
+    .product-filter-links {
+      margin-top: 15px;
+    }
+
+    .product-filter-links a {
+      color: var(--ppc-red);
+      font-weight: 600;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .product-filter-links a:hover {
+      text-decoration: underline;
+      color: #b4161c;
+    }
+
+    /* Product Listing */
+    .product-listing {
+      padding: 90px 0 100px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .product-card img {
+      height: 260px;
+      object-fit: contain;
+      width: 100%;
+      background: #fafafa;
+      padding: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .product-card h3 {
+      font-weight: 800;
+      color: var(--ppc-red);
+      margin-top: 15px;
+      text-transform: uppercase;
+    }
+
+    .product-card h6 {
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: var(--ppc-grey);
+      padding: 0 15px 15px;
+      min-height: 80px;
+    }
+
+    .product-card button {
+      border: none;
+      background: var(--ppc-red);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 25px;
+      padding: 8px 25px;
+      margin-bottom: 25px;
+      transition: background 0.3s;
+    }
+
+    .product-card button:hover {
+      background: #b4161c;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .product-hero h1 { font-size: 2.2rem; }
+      .product-card img { height: 220px; }
+      .product-filter-links a { display: inline-block; margin: 8px; }
+    }
+
+    @media (max-width: 576px) {
+      .product-hero { padding: 80px 20px 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="product-hero">
+    <h1>Premium Quality Cement</h1>
+    <p>Whatever your building need, PPC has 100% local, 100% quality cement in the PPC SURE RANGE.</p>
+  </section>
+
+  <!-- Product Filter -->
+  <div class="product-filter text-center">
+    <div class="dropdown d-inline-block">
+      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">Cement</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="aggregates.html">Aggregates</a></li>
+        <li><a class="dropdown-item" href="readymix.html">Readymix Concrete</a></li>
+        <li><a class="dropdown-item" href="premixes.html">Premixes</a></li>
+        <li><a class="dropdown-item" href="flyash.html">Fly Ash</a></li>
+      </ul>
+    </div>
+    <div class="product-filter-links mt-3">
+      <a href="/cements/surecem.html">SURECEM</a>
+      <a href="/cements/surebuild.html">SUREBUILD</a>
+      <a href="/cements/suretech.html">SURETECH</a>
+      <a href="/cements/sureroad.html">SUREROAD</a>
+      <a href="/cements/surewall.html">SUREWALL</a>
+      <a href="/cements/surecast.html">SURECAST</a>
+    </div>
+  </div>
+
+  <!-- Product Listing -->
+  <section class="product-listing">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Surewall -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="product-card text-center">
+            <img src="https://www.ppc.africa/media/hbohbvqq/surewall.png" alt="SUREWALL Cement">
+            <h3>SUREWALL</h3>
+            <h6>22,5X Masonry Cement</h6>
+            <p>Made by PPC from high-quality raw materials. Ideal for plastering, masonry and bricklaying applications.</p>
+            <a href="/cements/surewall.html" style="text-decoration:none;">
+              <button>View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Surecem -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="product-card text-center">
+            <img src="https://www.ppc.africa/media/ewbjuqot/surecem.png" alt="SURECEM Cement">
+            <h3>SURECEM</h3>
+            <h6>32,5R Early Strength Cement</h6>
+            <p>Economical general-purpose cement ideal for concrete, mortar, plaster, and bricklaying work.</p>
+            <a href="/cements/surecem.html" style="text-decoration:none;">
+              <button>View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Surebuild -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="product-card text-center">
+            <img src="https://www.ppc.africa/media/bhgmpgr0/surebuild.png" alt="SUREBUILD Cement">
+            <h3>SUREBUILD</h3>
+            <h6>42,5N Premium Multipurpose</h6>
+            <p>Engineered for superior performance in a wide range of general construction applications.</p>
+            <a href="/cements/surebuild.html" style="text-decoration:none;">
+              <button>View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Surecast -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="product-card text-center">
+            <img src="https://www.ppc.africa/media/o20dmt5l/surecast.png" alt="SURECAST Cement">
+            <h3>SURECAST</h3>
+            <h6>42,5R High Early Strength</h6>
+            <p>Premium Portland cement ideal for high-performance structural and precast applications.</p>
+            <a href="/cements/surecast.html" style="text-decoration:none;">
+              <button>View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Suretech -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="product-card text-center">
+            <img src="https://www.ppc.africa/media/xw5fvl24/suretech.png" alt="SURETECH Cement">
+            <h3>SURETECH</h3>
+            <h6>52,5N Superior High Strength</h6>
+            <p>Performance specialist cement for ready-mix, precast, and civil construction use.</p>
+            <a href="/cements/suretech.html" style="text-decoration:none;">
+              <button>View Product</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sureroad -->
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="product-card text-center">
+            <img src="https://www.ppc.africa/media/o1ohcf1p/sureroad.png" alt="SUREROAD Cement">
+            <h3>SUREROAD</h3>
+            <h6>32,5N Road Construction</h6>
+            <p>Blended cement optimized for soil stabilization and road building.</p>
+            <a href="/cements/sureroad.html" style="text-decoration:none;">
+              <button>View Product</button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

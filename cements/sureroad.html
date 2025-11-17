@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PPC — SUREROAD (replica)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<style>
+  :root{
+    --ppc-red:#e41e26;
+    --ppc-dark:#111;
+    --ppc-light:#f4f4f4;
+    --ppc-text:#222;
+    --container-width:1200px;
+  }
+
+  *{box-sizing:border-box}
+  body{font-family:'Poppins',sans-serif;margin:0;background:#fff;color:var(--ppc-text)}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:var(--container-width);margin:0 auto;padding:0 20px}
+
+  .left-rail{position:fixed;left:0;top:0;bottom:0;width:72px;background:var(--ppc-red);z-index:999}
+
+  header.page-header{margin-left:72px;background:#fff;border-bottom:1px solid #eee}
+  .header-inner{display:flex;justify-content:space-between;align-items:center;padding:18px 20px}
+
+  nav.top-links{display:flex;gap:28px;font-weight:600}
+  nav.top-links a{color:#222;font-size:14px}
+
+  .category-bar{margin-left:72px;padding:32px 0 8px}
+  .category-inner{display:flex;align-items:center;gap:24px;padding:0 20px}
+  .category-dropdown{background:var(--ppc-red);color:#fff;padding:14px 26px;font-weight:700;border-radius:2px}
+  .category-tabs{flex:1;display:flex;justify-content:center;gap:18px;background:#fff;padding:18px;border-radius:3px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+  .category-tabs a{color:#777;font-weight:700}
+  .category-tabs a.active{color:#000;font-weight:800;border-bottom:4px solid var(--ppc-red);padding-bottom:6px}
+
+  .hero{margin-left:72px;background:url('https://www.ppc.africa/media/iafpxmdr/cement-bg-1676201467-600.jpg') center/cover no-repeat;
+    padding:36px 0 90px}
+
+  .card{
+    max-width:1100px;margin:40px auto;background:#fff;padding:38px 44px;border-radius:3px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);position:relative;
+  }
+  .card::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:8px;background:var(--ppc-red)}
+
+  .card-row{display:flex;gap:36px;align-items:center}
+  .product-image img{width:100%;max-width:320px}
+
+  .product-title{font-size:56px;font-weight:800;margin:0}
+  .product-sub{color:var(--ppc-red);font-weight:800;margin:12px 0;text-transform:uppercase}
+  .product-desc{max-width:640px;line-height:1.6;margin-bottom:20px}
+
+  .datasheets{display:flex;gap:20px;margin-top:20px}
+  .ds-block{flex:1;padding:12px}
+  .downloadLink{color:var(--ppc-red);font-weight:800;border-bottom:3px solid var(--ppc-red);padding-bottom:6px}
+
+  .actions{display:flex;justify-content:center;gap:18px;margin-top:30px}
+  .btn-buy{background:var(--ppc-red);color:#fff;padding:14px 48px;font-weight:800;border:none;cursor:pointer}
+  .btn-calc{border:3px solid var(--ppc-red);color:var(--ppc-red);padding:12px 46px;font-weight:800;background:#fff;cursor:pointer}
+
+  .floating-sidebar{position:fixed;right:20px;top:40%;transform:translateY(-50%);z-index:2000}
+  .floating-sidebar ul{list-style:none;padding:0;margin:0}
+  .floating-sidebar li{margin-bottom:12px}
+  .floating-sidebar a{display:flex;align-items:center;gap:10px;background:#fff;color:var(--ppc-red);
+    padding:12px 18px;border-radius:8px;border:1px solid #ddd;font-weight:600;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);transition:.25s}
+  .floating-sidebar a:hover{background:var(--ppc-red);color:#fff;transform:translateX(-4px)}
+
+  .info-section{margin-left:72px;padding:36px 0}
+  .info-grid{display:flex;gap:22px;flex-wrap:wrap}
+  .info-card{flex:1 1 calc(25% - 22px);background:#fff;padding:22px;border-radius:4px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+  .info-card h5{font-weight:800;margin-bottom:8px}
+
+  .packaging{background:#f3f3f3;padding:28px;margin-top:18px;border-radius:4px}
+
+  .calc-hero{margin-left:72px;padding:30px 0}
+  .calc-hero .pageHeader{background:var(--ppc-red);color:#fff;padding:10px 20px;font-weight:800;border-radius:4px}
+
+  footer{margin-left:72px;background:#111;color:#fff;padding:28px 0;margin-top:30px}
+  footer .container{display:flex;justify-content:space-between;align-items:center}
+
+  @media(max-width:1000px){
+    .card-row{flex-direction:column}
+    .category-tabs{display:none}
+  }
+  @media(max-width:720px){
+    .left-rail,.floating-sidebar{display:none}
+    .hero,.info-section,footer,.category-bar,header.page-header{margin-left:0}
+    .card{width:95%}
+  }
+</style>
+</head>
+<body>
+
+<div class="left-rail"></div>
+
+<header class="page-header">
+  <div class="header-inner container">
+    <div class="logo">
+      <a href="/"><img src="https://www.ppc.africa/media/sbebd0rr/ppc-horizontal-logo.svg"></a>
+    </div>
+
+    <nav class="top-links">
+      <a href="/products/">PRODUCTS</a>
+      <a href="/product-calculator/">PRODUCT CALCULATOR</a>
+      <a href="/careers/">CAREERS</a>
+      <a href="/contact-us/">CONTACT US</a>
+    </nav>
+
+    <div class="top-tools">
+      <a href="#"><img src="https://www.ppc.africa/media/5atjrs45/flag-sa.png" style="height:20px"></a>
+      <a href="#" style="color:var(--ppc-red);font-weight:700">🔍</a>
+    </div>
+  </div>
+</header>
+
+<div class="category-bar">
+  <div class="category-inner">
+    <div class="category-dropdown">CEMENT ▾</div>
+    <div class="category-tabs">
+      <a href="/cements/surecem.html">SURECEM</a>
+      <a href="/cements/surebuild.html">SUREBUILD</a>
+      <a href="/cements/suretech.html">SURETECH</a>
+      <a class="active" href="/cements/sureroad.html">SUREROAD</a>
+      <a href="/cements/surewall.html">SUREWALL</a>
+      <a href="/cements/surecast.html">SURECAST</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="card">
+      <div class="card-row">
+
+        <div class="product-image">
+          <img src="https://www.ppc.africa/media/o1ohcf1p/sureroad.png" alt="SUREROAD bag">
+        </div>
+
+        <div class="product-content">
+          <h1 class="product-title">SUREROAD</h1>
+          <div class="product-sub">32,5N ROAD CONSTRUCTION CEMENT</div>
+
+          <div class="product-desc">
+            A premium blended cement engineered for soil stabilisation, road construction
+            and large infrastructure projects. Includes carefully controlled fly ash
+            and slag components for enhanced workability and long-term durability.
+          </div>
+
+          <div class="datasheets">
+            <div class="ds-block">
+              <h5>HANDLING & SAFETY</h5>
+              <div class="file">MSDS Cementitious Materials Safety</div>
+              <a class="downloadLink" href="https://www.ppc.africa/media/ju3h23us/ppc-msds_cement-1.pdf" download>DOWNLOAD</a>
+            </div>
+
+            <div class="ds-block" style="border-left:1px solid #eee">
+              <h5>DATA SHEET</h5>
+              <div class="file">PPC SUREROAD Datasheet 2025</div>
+              <a class="downloadLink" href="https://www.ppc.africa/media/acilgzah/ppc-sureroad-datasheet.pdf" download>DOWNLOAD</a>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-buy" onclick="window.location.href='/contact-us/'">BUY SUREROAD</button>
+            <button class="btn-calc" onclick="location.href='#calculateSection'">CALCULATOR</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Sidebar -->
+<div class="floating-sidebar d-none d-md-block">
+  <ul>
+    <li><a href="index.html"><i class="bi bi-list"></i><span> Menu</span></a></li>
+    <li><a href="calculator.html"><i class="bi bi-calculator"></i><span> Calculator</span></a></li>
+    <li><a href="#"><i class="bi bi-share"></i><span> Share</span></a></li>
+    <li><a href="mailto:contactus@ppc.co.za"><i class="bi bi-envelope"></i><span> Contact</span></a></li>
+  </ul>
+</div>
+
+<section class="info-section">
+  <div class="info-inner">
+
+    <h2 style="font-size:20px;font-weight:800;margin-bottom:12px">Product information</h2>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <h5>Applications</h5>
+        <ul>
+          <li>Road construction</li>
+          <li>Soil stabilisation</li>
+          <li>Layer works</li>
+          <li>Large civil applications</li>
+          <li>Infrastructure foundation layers</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h5>Specifications</h5>
+        <ul>
+          <li>Strength class: 32,5N</li>
+          <li>Blended with fly ash and slag</li>
+          <li>Durable for large-scale civil applications</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h5>Storage</h5>
+        <p>Keep dry and off the ground. Store under cover and protect from moisture.</p>
+        <ul>
+          <li>Stack max 12 bags</li>
+          <li>Use first in, first out</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h5>Safety</h5>
+        <ul>
+          <li>Cement is alkaline — avoid skin & eye contact</li>
+          <li>Wear gloves, goggles & mask</li>
+        </ul>
+        <p>For assistance: 08000 236 368 (SA)</p>
+      </div>
+
+    </div>
+
+    <div class="packaging">
+      <strong>Packaging</strong>
+      <div style="display:flex;gap:20px;margin-top:12px;flex-wrap:wrap;">
+
+        <div style="flex:1;min-width:280px">
+          <h6>50kg bags</h6>
+          <ul>
+            <li>Unitised 40 bags (2 tonnes)</li>
+            <li>Palletised options available</li>
+          </ul>
+        </div>
+
+        <div style="flex:1;min-width:280px">
+          <h6>Bulk</h6>
+          <ul>
+            <li>Bulk cement in 1.5 tonne bags</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="calculateSection" class="calc-hero">
+  <div class="container">
+    <div class="pageHeader">Product Calculator</div>
+    <p style="margin-top:12px;color:#444">Calculator UI placeholder.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="https://www.ppc.africa/media/sbebd0rr/ppc-horizontal-logo.svg" style="height:46px">
+    <div style="color:#dcdcdc">© PPC — All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.btn-calc').forEach(btn=>{
+  btn.addEventListener('click', e=>{
+    e.preventDefault();
+    document.querySelector('#calculateSection').scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
